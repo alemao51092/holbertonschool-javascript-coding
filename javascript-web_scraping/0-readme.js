@@ -1,6 +1,7 @@
 #!/usr/bin/node
 const fs = require('fs')
-fs.readFile('cisfun', (err, inputD) => {
+const rfile = process.argv[2]
+fs.readFile(rfile, "utf8", (err, inputD) => {
     if (err) throw err;
-    console.log(inputD.toString());
+    console.log(inputD);
 })
